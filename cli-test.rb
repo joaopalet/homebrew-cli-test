@@ -5,21 +5,21 @@
 class CliTest < Formula
   desc "A test CLI built by JP"
   homepage "https://github.com/joaopalet/cli-test"
-  version "0.0.5"
+  version "0.0.11"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/joaopalet/cli-test/releases/download/v0.0.5/cli-test_Darwin_arm64.tar.gz"
-      sha256 "02d08f70d6423dc77f57c3723dc28c3cb97a1d1bbf419b939a9741873a72610a"
+      url "https://github.com/joaopalet/cli-test/releases/download/v0.0.11/cli-test_Darwin_arm64.tar.gz"
+      sha256 "b2409950754f0cf626bb012256486692b1e37dd01ba45c15c5d66e8964906e9e"
 
       def install
         bin.install "jp-cli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/joaopalet/cli-test/releases/download/v0.0.5/cli-test_Darwin_x86_64.tar.gz"
-      sha256 "2176850b8557d5ba0f1d69c72bff3f261fceae92b37ca8d62873cb828a58b8d2"
+      url "https://github.com/joaopalet/cli-test/releases/download/v0.0.11/cli-test_Darwin_x86_64.tar.gz"
+      sha256 "7eb3b8579907c747f65ebe43af6f1ee0e5827a285a7d4196c9c86685c129016a"
 
       def install
         bin.install "jp-cli"
@@ -28,17 +28,17 @@ class CliTest < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/joaopalet/cli-test/releases/download/v0.0.5/cli-test_Linux_arm64.tar.gz"
-      sha256 "59a257571b5afdcdef1b412188dd4ab246cbb8b8d572af89dee93b9bffdc4c72"
+    if Hardware::CPU.intel?
+      url "https://github.com/joaopalet/cli-test/releases/download/v0.0.11/cli-test_Linux_x86_64.tar.gz"
+      sha256 "6e08d56dc77518efa2daed06d89dd141da204b744523d6eacd4d2e32bd82e19f"
 
       def install
         bin.install "jp-cli"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/joaopalet/cli-test/releases/download/v0.0.5/cli-test_Linux_x86_64.tar.gz"
-      sha256 "0de13cc3263f57ff6a95cc86751c819c22e3b72ad025a6038c732e3e4b2070fe"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/joaopalet/cli-test/releases/download/v0.0.11/cli-test_Linux_arm64.tar.gz"
+      sha256 "9422aff9100b2b28c53044ab4cfd16327ee4f201c0335075e7bbeb4bae27ddd5"
 
       def install
         bin.install "jp-cli"
