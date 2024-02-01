@@ -5,21 +5,21 @@
 class JpCli < Formula
   desc "A test CLI built by JP"
   homepage "https://github.com/joaopalet/cli-test"
-  version "0.0.22"
+  version "0.0.25"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/joaopalet/jp-cli/releases/download/v0.0.22/jp-cli_Darwin_arm64.tar.gz"
-      sha256 "3a470ecbb43c1599bb0a366bf75fc4f35c09097603f594358431d2823f2168e6"
+      url "https://github.com/joaopalet/jp-cli/releases/download/v0.0.25/jp-cli_Darwin_arm64.tar.gz"
+      sha256 "c622b459cf188d034a5b117ffca282b4e47e9a673779890f87b97c0350359086"
 
       def install
         bin.install "jp-cli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/joaopalet/jp-cli/releases/download/v0.0.22/jp-cli_Darwin_x86_64.tar.gz"
-      sha256 "695e63ff8bc60ac1a204be38e98b55f146c2034d504a8606c50c4f56c3d018b7"
+      url "https://github.com/joaopalet/jp-cli/releases/download/v0.0.25/jp-cli_Darwin_x86_64.tar.gz"
+      sha256 "66a33e80882c606e78a9b5425acfd28fab24e3feeb88d823cde148df1ea3f649"
 
       def install
         bin.install "jp-cli"
@@ -29,16 +29,16 @@ class JpCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/joaopalet/jp-cli/releases/download/v0.0.22/jp-cli_Linux_arm64.tar.gz"
-      sha256 "f6331df21a19db68b67ff45ea4f410acbe7d1bce1f4fa976a38182b5907f6dee"
+      url "https://github.com/joaopalet/jp-cli/releases/download/v0.0.25/jp-cli_Linux_arm64.tar.gz"
+      sha256 "28b1a3c13901ee939cc4ed6b3c849886edcf068cd01b936368314cc9b925647f"
 
       def install
         bin.install "jp-cli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/joaopalet/jp-cli/releases/download/v0.0.22/jp-cli_Linux_x86_64.tar.gz"
-      sha256 "55f851b70eaf86712d557e706539d948c4c1eef2f680ac7982e782f46d1e676d"
+      url "https://github.com/joaopalet/jp-cli/releases/download/v0.0.25/jp-cli_Linux_x86_64.tar.gz"
+      sha256 "1f9488722ddc13d79f2c39c258c897099d0b0a40c4eea4019bef395b10d046ae"
 
       def install
         bin.install "jp-cli"
