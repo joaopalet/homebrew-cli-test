@@ -5,21 +5,21 @@
 class JpCli < Formula
   desc "A test CLI built by JP"
   homepage "https://github.com/joaopalet/cli-test"
-  version "0.0.29"
+  version "0.0.31"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/joaopalet/jp-cli/releases/download/v0.0.29/jp-cli_Darwin_arm64.tar.gz"
-      sha256 "2b7dcac0891c219e9778569bb91683f51fb7657683a1b030fbad326314f837bf"
+      url "https://github.com/joaopalet/jp-cli/releases/download/v0.0.31/jp-cli_Darwin_arm64.tar.gz"
+      sha256 "e0e7a12b6e1d7a8c81ca05e280dd7c0d581755f9bf1bee80572e4fe208cce315"
 
       def install
         bin.install "jp-run"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/joaopalet/jp-cli/releases/download/v0.0.29/jp-cli_Darwin_x86_64.tar.gz"
-      sha256 "48458938ca05ebb6648fd541887e43b481d21043acb8305376d5165405a02b3b"
+      url "https://github.com/joaopalet/jp-cli/releases/download/v0.0.31/jp-cli_Darwin_x86_64.tar.gz"
+      sha256 "e38933ab1c764c912d0e8f2e557d87f0addfede9990a2a685f67c053a1278421"
 
       def install
         bin.install "jp-run"
@@ -29,16 +29,16 @@ class JpCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/joaopalet/jp-cli/releases/download/v0.0.29/jp-cli_Linux_arm64.tar.gz"
-      sha256 "3716fb039ff1143e3b1c0892d9d7c29a5c45b965374dd5054e31dd17fbccc9c3"
+      url "https://github.com/joaopalet/jp-cli/releases/download/v0.0.31/jp-cli_Linux_arm64.tar.gz"
+      sha256 "fcb63307c564b7f5d651e1ca0d83aa3023496e5c20ac850b8878f0163bf2ac9b"
 
       def install
         bin.install "jp-run"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/joaopalet/jp-cli/releases/download/v0.0.29/jp-cli_Linux_x86_64.tar.gz"
-      sha256 "206941edbd6b230efcef3b7a2d92c086e442f407e5f60b257dfe1d61482cf614"
+      url "https://github.com/joaopalet/jp-cli/releases/download/v0.0.31/jp-cli_Linux_x86_64.tar.gz"
+      sha256 "518a46f22976fea631168aa62e6dc5c2c18135d8ffb56a14f5221bb4c89c9c97"
 
       def install
         bin.install "jp-run"
