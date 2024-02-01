@@ -5,43 +5,43 @@
 class JpCli < Formula
   desc "A test CLI built by JP"
   homepage "https://github.com/joaopalet/cli-test"
-  version "0.0.28"
+  version "0.0.29"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/joaopalet/jp-cli/releases/download/v0.0.28/jp-cli_Darwin_x86_64.tar.gz"
-      sha256 "eb95640f45a004635d2612bb3b6b3c195faaf9f52f0b314491da54912d1b06e3"
+    if Hardware::CPU.arm?
+      url "https://github.com/joaopalet/jp-cli/releases/download/v0.0.29/jp-cli_Darwin_arm64.tar.gz"
+      sha256 "2b7dcac0891c219e9778569bb91683f51fb7657683a1b030fbad326314f837bf"
 
       def install
-        bin.install "jp-cli"
+        bin.install "jp-run"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/joaopalet/jp-cli/releases/download/v0.0.28/jp-cli_Darwin_arm64.tar.gz"
-      sha256 "defb9a8c91bde6a64189daaacfdafc4dcf3dd4533bd5cc54b8aae7625d7407eb"
+    if Hardware::CPU.intel?
+      url "https://github.com/joaopalet/jp-cli/releases/download/v0.0.29/jp-cli_Darwin_x86_64.tar.gz"
+      sha256 "48458938ca05ebb6648fd541887e43b481d21043acb8305376d5165405a02b3b"
 
       def install
-        bin.install "jp-cli"
+        bin.install "jp-run"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/joaopalet/jp-cli/releases/download/v0.0.28/jp-cli_Linux_arm64.tar.gz"
-      sha256 "2b0dcfa44e72b11f0294e25891f91d8183409b9ffa5a3ac17cf8cc6cf74299f1"
+      url "https://github.com/joaopalet/jp-cli/releases/download/v0.0.29/jp-cli_Linux_arm64.tar.gz"
+      sha256 "3716fb039ff1143e3b1c0892d9d7c29a5c45b965374dd5054e31dd17fbccc9c3"
 
       def install
-        bin.install "jp-cli"
+        bin.install "jp-run"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/joaopalet/jp-cli/releases/download/v0.0.28/jp-cli_Linux_x86_64.tar.gz"
-      sha256 "82d8a7ac6c274ddd3358bdcf647a0248b8ee6d58ce39f67108163662d0d140f5"
+      url "https://github.com/joaopalet/jp-cli/releases/download/v0.0.29/jp-cli_Linux_x86_64.tar.gz"
+      sha256 "206941edbd6b230efcef3b7a2d92c086e442f407e5f60b257dfe1d61482cf614"
 
       def install
-        bin.install "jp-cli"
+        bin.install "jp-run"
       end
     end
   end
